@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  background-color: hsl(217, 28%, 15%);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ----------------------------------------------- */
+/* RESUABLE COMPONENT */
+/* ----------------------------------------------- */
+
+h3 {
+  font-size: 250%;
+}
+
+.row {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+header {
+  /* background-color: hsl(218, 28%, 13%); */
+}
+
+nav {
+  margin: 50px 50px;
+}
+
+#logo {
+  float: left;
+  max-width: 100%;
+}
+
+#menu {
+  float: right;
+}
+
+#menu li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 25px;
+}
+
+#intro_illustration {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+
+#accessible_text {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* ----------------------------------------------- */
+/* SECTIONS */
+/* ----------------------------------------------- */
+.section_intro {
+  background-image: url(../images/bg-curvy-desktop.svg);
+  background-position: -65px 55px; /*r t*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 10%;
+}
+
+#short-copy {
+  width: 45%;
+  margin-left: 27.5%;
+  text-align: center;
+  font-size: 152%;
+  line-height: 145%;
+  margin-top: 50px;
+}
+
+#started {
+  display: block;
+  width: 200px;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: hsl(198, 60%, 50%);
+  border-radius: 20px;
+  margin: 20px auto;
+}
