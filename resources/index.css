@@ -21,6 +21,9 @@ h3 {
   font-size: 250%;
 }
 
+h5 {
+  font-size: 150%;
+}
 .row {
   max-width: 1440px;
   margin: 0 auto;
@@ -96,4 +99,25 @@ nav {
   background-color: hsl(198, 60%, 50%);
   border-radius: 20px;
   margin: 20px auto;
+}
+
+.descriptions {
+  background-color: hsl(218, 28%, 13%);
+  text-align: center;
+  padding-top: 5%;
+}
+
+.icon-row {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.icon_para {
+  width: 60%;
+  margin-left: 20%;
+  line-height: 1.6;
+  word-spacing: 1px;
+  text-align: center;
 }
