@@ -131,7 +131,7 @@ nav {
 }
 
 #productive_text {
-  margin-top: 30%;
+  margin-top: 20%;
 }
 
 #productive_text p {
@@ -157,30 +157,31 @@ nav {
 /* ----------------------------------------------- */
 
 .testimonials {
+  background-image: url(../images/bg-quotes.png);
+  background-repeat: no-repeat;
+  background-position: 3% 0%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-  padding: 5% 5%;
+  padding: 6% 5%;
   background-color: hsl(218, 28%, 13%);
 }
 
 .testimonials_block {
-  /* background-color: hsl(219, 30%, 18%); */
+  background-color: hsl(219, 30%, 18%);
   line-height: 1.5;
+  padding: 25px;
 }
 
 cite {
   display: block;
+  margin-top: 10%;
 }
 
 cite img {
   vertical-align: middle;
   border-radius: 50%;
   width: 15%;
-  height: 15%;
   float: left;
-}
-
-cite div {
-  float: right;
+  margin-right: 7px;
 }
