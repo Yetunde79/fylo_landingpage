@@ -29,12 +29,12 @@ h5 {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+}
 /* ----------------------------------------------- */
 /* HEADER */
 /* ----------------------------------------------- */
-header {
-  /* background-color: hsl(218, 28%, 13%); */
-}
 
 nav {
   margin: 50px 50px;
@@ -42,7 +42,6 @@ nav {
 
 #logo {
   float: left;
-  max-width: 100%;
 }
 
 #menu {
@@ -56,23 +55,13 @@ nav {
 }
 
 #intro_illustration {
-  max-width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 70px;
 }
 
 /* ----------------------------------------------- */
-/* HEADER */
-/* ----------------------------------------------- */
-
-#accessible_text {
-  text-align: center;
-  margin-top: 100px;
-}
-
-/* ----------------------------------------------- */
-/* SECTIONS */
+/* SECTION-INTRO */
 /* ----------------------------------------------- */
 .section_intro {
   background-image: url(../images/bg-curvy-desktop.svg);
@@ -80,6 +69,11 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 10%;
+}
+
+#accessible_text {
+  text-align: center;
+  margin-top: 100px;
 }
 
 #short-copy {
@@ -101,6 +95,9 @@ nav {
   margin: 20px auto;
 }
 
+/* ----------------------------------------------- */
+/* SECTION-DESCRIPTION */
+/* ----------------------------------------------- */
 .descriptions {
   background-color: hsl(218, 28%, 13%);
   text-align: center;
@@ -120,4 +117,70 @@ nav {
   line-height: 1.6;
   word-spacing: 1px;
   text-align: center;
+}
+
+/* ----------------------------------------------- */
+/* SECTION-PRODUCTIVE */
+/* ----------------------------------------------- */
+.productive {
+  padding: 10% 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  background-color: hsl(218, 28%, 13%);
+}
+
+#productive_text {
+  margin-top: 30%;
+}
+
+#productive_text p {
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+#productive_text a::after {
+  display: block;
+  width: 138px;
+  height: 1px;
+  margin-top: 1px;
+  content: " ";
+  background-color: hsl(176, 68%, 64%);
+}
+
+#productive_text i {
+  margin-left: 7px;
+}
+
+/* ----------------------------------------------- */
+/* SECTION-TESTIMONIALS */
+/* ----------------------------------------------- */
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 5% 5%;
+  background-color: hsl(218, 28%, 13%);
+}
+
+.testimonials_block {
+  /* background-color: hsl(219, 30%, 18%); */
+  line-height: 1.5;
+}
+
+cite {
+  display: block;
+}
+
+cite img {
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+  float: left;
+}
+
+cite div {
+  float: right;
 }
