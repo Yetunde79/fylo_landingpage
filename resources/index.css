@@ -1,8 +1,7 @@
 /*todo:
-add hover on buttons, menu, links, menu items, icons,
-add focus on buttons, input
-make movable by keyboard
-make mobile responsive*/
+
+make mobile responsive: fix media queries
+*/
 
 * {
   margin: 0;
@@ -36,6 +35,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
 .dark-color {
   background-color: hsl(218, 28%, 13%);
 }
@@ -73,7 +76,7 @@ img {
 /* ----------------------------------------------- */
 
 nav {
-  margin: 50px 50px;
+  margin: 50px;
 }
 
 #logo {
@@ -82,12 +85,26 @@ nav {
 
 #menu {
   float: right;
+  text-align: center;
 }
 
 #menu li {
   display: inline-block;
   list-style: none;
   padding-right: 25px;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+}
+
+#menu a:hover,
+.hover li:hover,
+.hover a:hover {
+  color: hsl(198, 60%, 50%);
+  cursor: pointer;
+  transition: all 1s;
 }
 
 #intro_illustration {
@@ -136,6 +153,13 @@ nav {
   border-radius: 20px;
   margin: 20px auto;
 }
+#started:hover,
+input[type="submit"]:hover {
+  background-color: white;
+  color: hsl(198, 60%, 50%);
+  cursor: pointer;
+  transition: all 1s;
+}
 
 /* ----------------------------------------------- */
 /* SECTION-DESCRIPTION */
@@ -164,7 +188,7 @@ nav {
 /* SECTION-PRODUCTIVE */
 /* ----------------------------------------------- */
 .productive {
-  padding: 10% 7%;
+  padding: 15% 7%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5%;
@@ -176,7 +200,7 @@ nav {
 
 #productive_text p {
   line-height: 1.2;
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 
 #productive_text a::after {
@@ -186,6 +210,12 @@ nav {
   margin-top: 1px;
   content: " ";
   background-color: hsl(176, 68%, 64%);
+}
+
+#productive_text a:hover {
+  color: hsl(176, 68%, 64%);
+  cursor: pointer;
+  transition: color 1s;
 }
 
 #productive_text i {
@@ -282,7 +312,7 @@ input[type="text"] {
 input[type="text"]:active,
 input[type="text"]:focus,
 input[type="submit"]:focus {
-  outline: none;
+  outline: thin dotted;
 }
 
 input[type="submit"] {
@@ -307,12 +337,182 @@ footer {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   padding-top: 2%;
+  gap: 50px;
 }
 
 .footer_grid li {
   list-style: none;
   padding-bottom: 10%;
+  cursor: pointer;
 }
 
-#location {
+#footer_logo {
+  padding-bottom: 15px;
+}
+
+#facebook:hover {
+  color: #3b5998;
+  border-color: #3b5998;
+}
+
+#twitter:hover {
+  color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+#instagram:hover {
+  color: #e1306c;
+  border-color: #e1306c;
+}
+
+/* ----------------------------------------------- */
+/* MEDIA QUERIES*/
+/* ----------------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+  #logo {
+    width: 15%;
+  }
+
+  nav {
+    margin: 20px;
+    font-size: 90%;
+  }
+  .icon-row,
+  .productive,
+  .footer_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  #short-copy {
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .section_intro .row {
+    padding: 0 3%;
+  }
+
+  .testimonials {
+    padding-top: 25%;
+  }
+
+  footer {
+    padding-top: 20%;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  .footer_grid li {
+    list-style: none;
+    padding-bottom: 5%;
+    cursor: pointer;
+  }
+
+  .social_media {
+    display: inline-block;
+  }
+
+  .early_access {
+    padding: 7% 3%;
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    margin-top: 5%;
+    width: 60%;
+  }
+
+  input[type="text"] {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #logo {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 770px) {
+  .footer_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 646px) {
+  input[type="submit"] {
+    margin-top: 5%;
+    width: 60%;
+  }
+
+  input[type="text"] {
+    width: 60%;
+  }
+
+  .productive {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  #productive_text {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 646px) {
+  .testimonials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 600px) {
+  .testimonials {
+    padding-top: 13%;
+  }
+
+  .early_access {
+    padding: 7%;
+    text-align: center;
+  }
+
+  .early_access div {
+    background-color: hsl(217, 28%, 15%);
+    padding: 5% 2%;
+    border-radius: 6px;
+  }
+
+  .footer_grid li {
+    list-style: none;
+    padding-bottom: 5%;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 910px) and (min-width: 765px) {
+  .early_access {
+    padding: 7%;
+    text-align: center;
+  }
+
+  .early_access div {
+    background-color: hsl(217, 28%, 15%);
+    padding: 5% 2%;
+    border-radius: 6px;
+  }
+
+  footer {
+    padding: 2%;
+  }
+
+  .social_media li:last-child {
+    padding-right: 0;
+  }
 }
